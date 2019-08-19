@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
     "build:DEV": "webpack --mode development",
     "build:PROD": "webpack --mode production",
-    "dev": "webpack-dev-server --mode development"
+    "dev": "webpack-dev-server --config webpack.dev.js --open"
   },
   "keywords": [],
   "author": "",
@@ -24,11 +26,13 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.2.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7",
-    "webpack-dev-server": "^3.8.0"
+    "webpack-dev-server": "^3.8.0",
+    "webpack-merge": "^4.2.1"
   }
 }
